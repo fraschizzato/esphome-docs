@@ -19,6 +19,7 @@ This component requires a :doc:`/components/midea_dongle` to be configured.
         - `Carrier <https://www.carrier.com/>`_
         - `Comfee <http://www.comfee-russia.ru/>`_
         - `Inventor <https://www.inventorairconditioner.com/>`_
+        - `Kaysun <https://www.kaysun.es/>`_
         - and maybe others
 
     Example of hardware implementation is `Midea Open Dongle <https://github.com/dudanov/midea-open-dongle>`_ in free `KiCad <https://kicad-pcb.org>`_ format.
@@ -42,6 +43,9 @@ This component requires a :doc:`/components/midea_dongle` to be configured.
       outdoor_temperature:
         name: "outdoor"
       beeper: true
+      turbo: true
+      sleep: true
+      eco: true
 
 Configuration variables:
 ------------------------
@@ -56,6 +60,9 @@ Configuration variables:
   - **id** (*Optional*, :ref:`config-id`): Set the ID of this sensor for use in lambdas.
   - All other options from :ref:`Sensor <config-sensor>`.
 - **beeper** (*Optional*, bool, default: **false**): Beeper feedback on command.
+- **turbo** (*Optional*, bool, default: **false**): Enables device Turbo/Boost Mode.
+- **sleep** (*Optional*, bool, default: **false**): Enables device Sleep/Night Mode.
+- **eco** (*Optional*, bool, default: **false**): Enables Frost Protection Mode.
 - All other options from :ref:`Climate <config-climate>`.
 
 Acknowledgments:
